@@ -21,10 +21,10 @@ switch ($_POST["paleta"])
 list($width, $height, $type, $attr)= getimagesize($image_path); 
 $celdashorizontal = $width / 32;
 $celdasvertical = $height / 32;
-$numerocapas = 4;
+$numerocapas = 5;
 ?>
 
-<html lang="en"><head>
+<html lang="en"><head></head>
 <title>Editor de mapas</title>
 
 <style type="text/css">
@@ -124,6 +124,7 @@ for($i=0;$i<$numerocapas;$i++)
 		echo '<div style="width: 100%; position: relative; float: left; display: table;">';
 		for($b=0;$b<$celdashorizontal;$b++)
 			{ 
+
 				echo "<div id='tilebase".$i."a".$a."a".$b."' class='drag' onClick=\"CambiarEstilo('seleccionado','item tilebase".$a."a".$b."');\" style='background:url(\"".$image_path."\") -". ($b*32) ."px -". ($a*32) ."px; width: 32px; height: 32px; float:left;'></div>";
 			} 
 		echo "</div>";
@@ -152,7 +153,15 @@ for($e=0;$e<$numerocapas;$e++)
 	echo "<div style='display: table;'>";
 		for($d=0;$d<$tilesY;$d++)
 			{ 
-				echo "<div name='celdas' style='border: 1px solid grey' id='".$e."a".$c."a".$d."' onClick=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" onmousedown=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" class='item'></div>";
+/*				if($e==0)
+					{
+						echo "<div name='celdas' style='border: none;background-image: url(\"images/fondo32x32.JPG\");' id='".$e."a".$c."a".$d."' onClick=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" onmousedown=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" class='item'></div>";
+					}
+				else
+					{
+*/						echo "<div name='celdas' id='".$e."a".$c."a".$d."' onClick=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" onmousedown=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" class='item'></div>";
+//					}
+
 			} 
 	echo "</div>"; 
    } 
