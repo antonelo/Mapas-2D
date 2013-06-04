@@ -109,7 +109,7 @@ for($i=0;$i<$numerocapas;$i++)
 	{
 		echo "<input checked type=\"checkbox\" name=\"c".$i."\" onclick=\"showMe('div".$i."', this)\">Capa ".$i." <br>";
 	}
-		echo "<input checked type=\"checkbox\" onclick=\"bordear()\">borde <br>";
+//		echo "<input checked type=\"checkbox\" onclick=\"bordear()\">borde <br>";
 	
 ?>
 </FORM>
@@ -153,14 +153,14 @@ for($e=0;$e<$numerocapas;$e++)
 	echo "<div style='display: table;'>";
 		for($d=0;$d<$tilesY;$d++)
 			{ 
-/*				if($e==0)
+				if($e==0)
 					{
 						echo "<div name='celdas' style='border: none;background-image: url(\"images/fondo32x32.JPG\");' id='".$e."a".$c."a".$d."' onClick=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" onmousedown=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" class='item'></div>";
 					}
 				else
 					{
-*/						echo "<div name='celdas' id='".$e."a".$c."a".$d."' onClick=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" onmousedown=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" class='item'></div>";
-//					}
+						echo "<div name='celdas' id='".$e."a".$c."a".$d."' onClick=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" onmousedown=\"CogerEstilo('seleccionado','".$e."a".$c."a".$d."');\" class='item'></div>";
+					}
 
 			} 
 	echo "</div>"; 
