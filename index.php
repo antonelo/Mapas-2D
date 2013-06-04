@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+<head></head>
 <title>Editor mapas</title>
 
 <body>
