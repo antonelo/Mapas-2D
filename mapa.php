@@ -25,7 +25,7 @@ $numerocapas = 5;
 ?>
 
 <html lang="en"><head></head>
-<title>Editor de mapas</title>
+<title>Editando el mapa</title>
 
 <style type="text/css">
 body {color:#000;background-color:#FFF; font-family:Arial, Helvetica, sans-serif;}
